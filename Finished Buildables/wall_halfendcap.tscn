@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cswmvtuiewsx"]
+
+[ext_resource type="PackedScene" uid="uid://cre1wwo8f8h8g" path="res://brackeys_3d_game_assets/dungeon_assets/building/wall_half_endcap.glb" id="1_8maju"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nvycg"]
+size = Vector3(1.9925842, 0.45703125, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ug6bt"]
+size = Vector3(1.9925842, 0.5913086, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhpga"]
+size = Vector3(1.7102814, 2.7399902, 0.51342773)
+
+[node name="Wall_halfendcap" type="StaticBody3D" unique_id=279365768]
+
+[node name="wall_half_endcap2" parent="." unique_id=793377404 instance=ExtResource("1_8maju")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=340343745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0080608, 0.22070313, 0)
+shape = SubResource("BoxShape3D_nvycg")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=314352059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0080608, 3.6512187, 0)
+shape = SubResource("BoxShape3D_ug6bt")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1326385218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1492122, 1.8547587, -0.0015869141)
+shape = SubResource("BoxShape3D_bhpga")
+
+[editable path="wall_half_endcap2"]

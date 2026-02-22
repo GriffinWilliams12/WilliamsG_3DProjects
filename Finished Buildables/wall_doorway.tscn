@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://xvdtw6nub1ff"]
+
+[ext_resource type="PackedScene" uid="uid://smwgosypotwn" path="res://brackeys_3d_game_assets/dungeon_assets/building/wall_doorway.glb" id="1_7f8nd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_theia"]
+size = Vector3(0.96435547, 0.49890137, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ea4q5"]
+size = Vector3(0.9621582, 2.6791382, 0.4921875)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s1846"]
+size = Vector3(4.0021057, 0.75914, 0.9659424)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yywfg"]
+size = Vector3(4.0021057, 0.3956833, 0.48501587)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ehxis"]
+size = Vector3(0.35827637, 2.7261353, 1.970581)
+
+[node name="Wall_doorway" type="StaticBody3D" unique_id=1191065377]
+
+[node name="wall_doorway2" parent="." unique_id=881189991 instance=ExtResource("1_7f8nd")]
+
+[node name="wall_doorway_door" parent="wall_doorway2/wall_doorway" parent_id_path=PackedInt32Array(881189991, 213275982) index="0" unique_id=1702721237]
+transform = Transform3D(0.020558506, 0, 0.99978864, 0, 1, 0, -0.99978864, 0, 0.020558506, -0.8200989, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=64745208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5162054, 0.25054932, 0)
+shape = SubResource("BoxShape3D_theia")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1045613756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5162517, 0.25054932, 0)
+shape = SubResource("BoxShape3D_theia")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=902645323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5162517, 1.8879837, 0.0068359375)
+shape = SubResource("BoxShape3D_ea4q5")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1902201909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5154446, 1.8879837, 0.0068359375)
+shape = SubResource("BoxShape3D_ea4q5")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=979097489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0067874193, 3.7296095, 0.011291504)
+shape = SubResource("BoxShape3D_s1846")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=668345204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0067874193, 3.0413048, -0.006942749)
+shape = SubResource("BoxShape3D_yywfg")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="." unique_id=1613610996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7678072, 1.3715162, -0.8243563)
+shape = SubResource("BoxShape3D_ehxis")
+
+[editable path="wall_doorway2"]

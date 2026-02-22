@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xubmxdo0rr1e"]
+
+[ext_resource type="PackedScene" uid="uid://8ya54h6u3d2i" path="res://brackeys_3d_game_assets/dungeon_assets/building/wall.glb" id="1_3ys4i"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jgpjp"]
+points = PackedVector3Array(2, 4, 0.5, 2, 0, 0.5, 2, 4, -0.5, -2, 4, 0.5, 2, 0, -0.5, -2, 0, 0.5, -2, 4, -0.5, -2, 0, -0.5)
+
+[node name="Wall" type="StaticBody3D" unique_id=887001247]
+
+[node name="wall2" parent="." unique_id=663870223 instance=ExtResource("1_3ys4i")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1343093193]
+shape = SubResource("ConvexPolygonShape3D_jgpjp")
+
+[editable path="wall2"]

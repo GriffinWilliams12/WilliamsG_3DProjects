@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://pnu54unnx0rk"]
+
+[ext_resource type="PackedScene" uid="uid://db3vd8oftpdef" path="res://brackeys_3d_game_assets/dungeon_assets/building/floor_stone.glb" id="1_sxf8w"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vxr2i"]
+points = PackedVector3Array(-2, -0.10000001, -2, -2, -0.10000001, 2, -2, 0.049985334, -2, 2, -0.10000001, -2, -2, 0.049985334, 2, 2, -0.10000001, 2, 0, 0.050000012, 0, 2, 0.049985334, -2, 2, 0.049985334, 2)
+
+[node name="Floorstone" type="StaticBody3D" unique_id=500742979]
+
+[node name="floor_stone" parent="." unique_id=744529739 instance=ExtResource("1_sxf8w")]
+
+[node name="floor_tile_large" parent="floor_stone" index="0" unique_id=471819404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0058090687, -0.0060973167, -0.014273167)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1651671989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0058090687, -0.0060973167, -0.014273167)
+shape = SubResource("ConvexPolygonShape3D_vxr2i")
+
+[editable path="floor_stone"]

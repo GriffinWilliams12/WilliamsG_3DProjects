@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dftv5l61sbmqq"]
+
+[ext_resource type="PackedScene" uid="uid://dw0rkpdmx0gmv" path="res://brackeys_3d_game_assets/dungeon_assets/props/crates_stacked.glb" id="1_dghet"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_up735"]
+size = Vector3(0.5570679, 0.8948059, 0.7285156)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rb5up"]
+size = Vector3(1.454773, 0.5949249, 0.96875)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lgegg"]
+size = Vector3(0.46177673, 0.34433746, 0.4987793)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sjr2j"]
+size = Vector3(0.46177673, 0.26408768, 0.4987793)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iaao5"]
+size = Vector3(1.454773, 0.5949249, 0.96875)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ae30d"]
+size = Vector3(1.454773, 0.5949249, 0.96875)
+
+[node name="Crates_stacked" type="StaticBody3D" unique_id=1672619857]
+
+[node name="crates_stacked2" parent="." unique_id=85854736 instance=ExtResource("1_dghet")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1980897609]
+transform = Transform3D(0.99504167, 0, 0.099458665, 0, 1, 0, -0.099458665, 0, 0.99504167, 0.46794888, 0.4612795, 0.55788803)
+shape = SubResource("BoxShape3D_up735")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1058009315]
+transform = Transform3D(0.9525442, 0.0063001662, -0.30433488, -0.006770796, 0.99997693, -0.00049110595, 0.30432478, 0.0025283934, 0.95256495, -0.21184017, 1.4812053, -0.41088775)
+shape = SubResource("BoxShape3D_rb5up")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=590410454]
+transform = Transform3D(0.9525442, 0.0063001662, -0.30433488, -0.006770796, 0.99997693, -0.00049110595, 0.30432478, 0.0025283934, 0.95256495, 0.14042917, 1.9691719, -0.2555319)
+shape = SubResource("BoxShape3D_lgegg")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1600571817]
+transform = Transform3D(0.9525442, 0.0063001662, -0.30433488, -0.006770796, 0.99997693, -0.00049110595, 0.30432478, 0.0025283934, 0.95256495, -0.40668106, 1.929048, -0.40445793)
+shape = SubResource("BoxShape3D_sjr2j")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1676486436]
+transform = Transform3D(0.905444, 0.00633916, 0.4244182, -0.006770796, 0.99997693, -0.00049110583, -0.42441148, -0.0024289764, 0.90546614, -0.19698574, 0.8621386, -0.37006596)
+shape = SubResource("BoxShape3D_iaao5")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=699916539]
+transform = Transform3D(0.98878825, 0.0067682997, 0.14917028, -0.006770796, 0.99997693, -0.00049110566, -0.1491701, -0.000524397, 0.9888114, -0.23639925, 0.30378485, -0.41514924)
+shape = SubResource("BoxShape3D_ae30d")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="." unique_id=989970649]
+transform = Transform3D(0.99504167, 0, 0.099458665, 0, 1, 0, -0.099458665, 0, 0.99504167, -0.3977634, 0.38387167, 0.44631568)
+shape = SubResource("BoxShape3D_up735")
+
+[editable path="crates_stacked2"]
