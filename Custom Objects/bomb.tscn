@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://gjfrsrieil27"]
+
+[ext_resource type="ArrayMesh" uid="uid://7g42p5k0lgsa" path="res://Custom Objects/Bomb.obj" id="1_qvfho"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bcsu4"]
+
+[node name="Bomb" type="Node3D" unique_id=771503271]
+
+[node name="Bomb" type="MeshInstance3D" parent="." unique_id=202794632]
+mesh = ExtResource("1_qvfho")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bomb" unique_id=597998945]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bomb/StaticBody3D" unique_id=1521482398]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
+shape = SubResource("SphereShape3D_bcsu4")

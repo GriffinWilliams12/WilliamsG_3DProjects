@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8xgmeano4kgi"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://AddOns/brackeys-proto-controller-main/proto_controller/proto_controller.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://gjfrsrieil27" path="res://Custom Objects/bomb.tscn" id="2_ryguw"]
 [ext_resource type="PackedScene" uid="uid://j2aggufhtssd" path="res://Finished Buildables/Pillar.tscn" id="2_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://conqofvsw5d1y" path="res://brackeys_3d_game_assets/dungeon_assets/props/torch_mounted.glb" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://baxflpkdlexid" path="res://AddOns/brackeys-proto-controller-main/proto_controller/proto_controller.gd" id="3_h2yge"]
@@ -784,6 +785,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 0, 40.6)
 
 [node name="Floorstone252" parent="Courtyard/Stone floor" unique_id=180229686 instance=ExtResource("6_5vw27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 0, 44.6)
+
+[node name="Bomb" parent="Courtyard/Stone floor" unique_id=771503271 instance=ExtResource("2_ryguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 3)
 
 [node name="Columns" type="Node3D" parent="Courtyard" unique_id=2008983098]
 
@@ -7195,3 +7199,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20000076, 1.1000004, 0)
 light_color = Color(1, 0.5764706, 0, 1)
 light_energy = 3.915
 shadow_enabled = true
+
+[node name="Bomb2" parent="." unique_id=2112553304 instance=ExtResource("2_ryguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -20)
