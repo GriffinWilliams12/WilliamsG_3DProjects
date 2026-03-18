@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://8xgmeano4kgi"]
+[gd_scene load_steps=35 format=3 uid="uid://8xgmeano4kgi"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://AddOns/brackeys-proto-controller-main/proto_controller/proto_controller.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://gjfrsrieil27" path="res://Custom Objects/bomb.tscn" id="2_ryguw"]
@@ -23,9 +23,24 @@
 [ext_resource type="PackedScene" uid="uid://84oy6hpo8sdi" path="res://Finished Props/sword_shield.tscn" id="17_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://dftv5l61sbmqq" path="res://Finished Props/crates_stacked.tscn" id="18_0odxb"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ryguw"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_d13ii"]
+sky_material = SubResource("ProceduralSkyMaterial_ryguw")
+
+[sub_resource type="Environment" id="Environment_1u8w0"]
+background_mode = 1
+background_color = Color(0.9948446, 0.65337217, 0.8294796, 1)
+sky = SubResource("Sky_d13ii")
+ambient_light_source = 3
+ambient_light_energy = 1.16
+tonemap_mode = 2
+
 [sub_resource type="Gradient" id="Gradient_ryguw"]
-offsets = PackedFloat32Array(0, 0.72845954, 0.92689294)
-colors = PackedColorArray(0, 0, 0, 1, 0.42535213, 0.42535213, 0.42535213, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.72845954, 0.98955613)
+colors = PackedColorArray(0, 0, 0, 1, 0.42535213, 0.42535213, 0.42535213, 1, 0.4782802, 0.4782802, 0.4782802, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_d13ii"]
 gradient = SubResource("Gradient_ryguw")
@@ -59,6 +74,9 @@ material = SubResource("StandardMaterial3D_a6jrf")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kq58d"]
 
 [node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1u8w0")
 
 [node name="Courtyard" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -23)
@@ -935,8 +953,9 @@ transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -33.
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -33.5, 7.3, 7.1000013)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 9.570581, 9.554247, -11.384227)
+transform = Transform3D(-0.70387876, 0.1725796, 0.68903625, 0.5208661, 0.78495216, 0.33548287, -0.48296294, 0.5950349, -0.642402, 116.270584, 20.554247, -3.3842278)
 shadow_enabled = true
+sky_mode = 1
 
 [node name="ProtoController" parent="." instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21722507, 0.67114544, -0.017523944)
@@ -6422,6 +6441,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 12, -61)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Indoors/Colums/StaticBody3D16"]
 light_energy = 16.0
+shadow_enabled = true
 
 [node name="StaticBody3D17" parent="Indoors/Colums" instance=ExtResource("2_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 8, -61)
@@ -6431,6 +6451,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 12, -61)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Indoors/Colums/StaticBody3D18"]
 light_energy = 16.0
+shadow_enabled = true
 
 [node name="StaticBody3D19" parent="Indoors/Colums" instance=ExtResource("2_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 8, -61)
@@ -6440,6 +6461,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 12, -61)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Indoors/Colums/StaticBody3D20"]
 light_energy = 16.0
+shadow_enabled = true
 
 [node name="StaticBody3D21" parent="Indoors/Colums" instance=ExtResource("2_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 8, -61)
@@ -6449,6 +6471,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 12, -61)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Indoors/Colums/StaticBody3D22"]
 light_energy = 16.0
+shadow_enabled = true
 
 [node name="StaticBody3D23" parent="Indoors/Colums" instance=ExtResource("2_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 8, -61)
@@ -6458,6 +6481,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 12, -61)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Indoors/Colums/StaticBody3D24"]
 light_energy = 16.0
+shadow_enabled = true
 
 [node name="StaticBody3D25" parent="Indoors/Colums" instance=ExtResource("2_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 8, -77)
@@ -6465,6 +6489,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 8, -77)
 [node name="OmniLight3D" type="OmniLight3D" parent="Indoors/Colums/StaticBody3D25"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 light_energy = 16.0
+shadow_enabled = true
 
 [node name="StaticBody3D26" parent="Indoors/Colums" instance=ExtResource("2_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 12, -77)
@@ -6533,6 +6558,7 @@ light_color = Color(1, 0.65882355, 0, 1)
 light_energy = 16.0
 light_indirect_energy = 0.584
 light_volumetric_fog_energy = 1.623
+shadow_enabled = true
 omni_range = 40.0
 
 [node name="StaticBody3D39" parent="Indoors/Colums" instance=ExtResource("2_ycdy4")]
@@ -6546,6 +6572,7 @@ light_color = Color(1, 0.65882355, 0, 1)
 light_energy = 16.0
 light_indirect_energy = 0.584
 light_volumetric_fog_energy = 1.623
+shadow_enabled = true
 omni_range = 40.0
 
 [node name="StaticBody3D41" parent="Indoors/Colums" instance=ExtResource("2_ycdy4")]
@@ -6559,6 +6586,7 @@ light_color = Color(1, 0.65882355, 0, 1)
 light_energy = 16.0
 light_indirect_energy = 0.584
 light_volumetric_fog_energy = 1.623
+shadow_enabled = true
 omni_range = 40.0
 
 [node name="Furniture" type="Node3D" parent="Indoors"]
@@ -7240,7 +7268,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -20)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 3.6, -19.800001)
-emitting = false
 amount = 12
 lifetime = 2.0799999999999996
 explosiveness = 0.9
